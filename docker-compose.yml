@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    container_name: my-python-app
+    volumes:
+      - .:/app
