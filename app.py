@@ -9,9 +9,9 @@ def ask_ollama(prompt):
         "stream": False
     }).encode()
 
-    req = urllib.request.Request(url, data=data, 
+    req = urllib.request.Request(url, data=data,
           headers={"Content-Type": "application/json"})
-    
+
     with urllib.request.urlopen(req) as res:
         result = json.loads(res.read())
         return result["response"]
